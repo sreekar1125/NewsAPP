@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Home">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/homeToolBar"
+        android:background="@color/red">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dehaze"
+            android:id="@+id/navigationBar"
+            android:layout_margin="8dp"
+            android:background="@color/red"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome"
+            android:background="@color/red"
+            android:textColor="@color/white"/>
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/notification"
+            android:id="@+id/notification"
+            android:layout_margin="8dp"
+            android:layout_gravity="right"
+            android:background="@color/red"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/search"
+            android:id="@+id/search"
+            android:layout_margin="8dp"
+            android:layout_gravity="right"
+            android:background="@color/red"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_vert"
+            android:id="@+id/vert"
+            android:layout_margin="8dp"
+            android:layout_gravity="right"
+            android:background="@color/red"
+            />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/homeToolBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNews"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/news_item" />
+
+            <ProgressBar
+                android:id="@+id/rvProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone" />
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/home_icon"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:id="@+id/homeBtn"
+            android:padding="@dimen/activity_horizontal_margin"
+            app:tint="@color/red"
+            android:tooltipText="Home"/>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/article"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:id="@+id/articles"
+            android:padding="@dimen/activity_horizontal_margin"
+            app:tint="@color/red" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/city"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:id="@+id/myCity"
+            android:padding="@dimen/activity_horizontal_margin"
+            app:tint="@color/red" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/live"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white"
+            android:id="@+id/live"
+            android:padding="@dimen/activity_horizontal_margin"
+            app:tint="@color/red" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+</RelativeLayout>
